@@ -3,16 +3,26 @@
 //Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
 var dadoPlayer = Math.floor(Math.random() * 6 ) + 1 ;
+document.getElementById('giocatore').innerHTML = 'Dado giocatore: ' + dadoPlayer;
 console.log('numero random giocatore: ' + dadoPlayer);
+
 var dadoCPU = Math.floor(Math.random() * 6 ) + 1 ;
+document.getElementById('cpu').innerHTML = 'Dado CPU: ' + dadoCPU;
 console.log('numero random CPU: ' + dadoCPU);
 
+var winMex = 'Bravo, il giocatore ha vinto!';
+var lossMex = 'Peccato, hai perso! :(';
+var drawMex = 'La partita è finita in pareggio!';
+
 if (dadoPlayer > dadoCPU) {
-    console.log('Il giocatore ha vinto')
+    document.getElementById('esito').innerHTML = winMex;
+    console.log('Il giocatore ha vinto');
 } else if (dadoPlayer < dadoCPU){
-    console.log('la CPU ha vinto')
+    document.getElementById('esito').innerHTML = lossMex;
+    console.log('la CPU ha vinto');
 } else {
-    console.log('PAREGGIO')
+    document.getElementById('esito').innerHTML = drawMex;
+    console.log('PAREGGIO');
 }
 
 

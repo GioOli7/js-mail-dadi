@@ -13,6 +13,7 @@ var mailList = ['giovanni1@gmail.com', 'paolo99@gmail.com', 'fabioff@hotmail.it'
 
 // 2 - chiedi email all utente
 var user = prompt('Inserisci la tua email per accedere');
+document.getElementById('username').innerHTML = 'Indirizzo email inserito: ' + user;
 // console.log('user inserito: ' + user);
 
 
@@ -27,9 +28,14 @@ for (var i = 0; i < mailList.length; i++) {
     }
 }
 
+var okMessage = "Ben fatto, la tua email è presente nella lista";
+var noMessage = "Errore, la tua email non è presente nella lista"
+
 // 4 - se SI, messaggio positivo, altimenti messaggio negativo
 if (userFounded == true) {
-    alert('Ben fatto, la tua email è presente nella lista')
+    alert(okMessage)
+    document.getElementById('result').innerHTML = okMessage;
 } else {
-    alert('Errore, la tua email non è presente nella lista')
+    alert(noMessage);
+    document.getElementById('result').innerHTML = noMessage;
 }
