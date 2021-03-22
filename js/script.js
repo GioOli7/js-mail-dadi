@@ -13,14 +13,14 @@ var mailList = ['giovanni1@gmail.com', 'paolo99@gmail.com', 'fabioff@hotmail.it'
 
 // 2 - chiedi email all utente
 var user = prompt('Inserisci la tua email per accedere');
-console.log('user inserito: ' + user);
+// console.log('user inserito: ' + user);
 
 
 // 3 - controlla se l'email inserita si trova nell array
 userFounded = false;
 
 for (var i = 0; i < mailList.length; i++) {
-    console.log(mailList[i])
+    // console.log(mailList[i])
     if (mailList[i] == user) {
         userFounded = true;
         break;
